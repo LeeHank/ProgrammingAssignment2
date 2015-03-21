@@ -3,13 +3,24 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
-        i <- NULL
+makeCacheMatrix <- function(data_matrix = matrix()) {
+        stored_InverseMatrix <- NULL
         set <- function(y){
-        x <<- y
-        i <<- NULL
+                data_matrix <<- y
+                stored_InverseMatrix <<- NULL
+        }
+        get <- function(){
+                return(data_matrix)
+        }
+        setInverseMatrix <- function(sent_replacement_InverseMatrix){
+                stored_InverseMatrix <<- sent_replacement_InverseMatrix
+        }
+        getInverseMatrix <- function(){
+                return(stored_InverseMatrix)
+        }
+        list(set=set, get=get, setInverseMatrix=setInverseMatrix,
+             getInverMatrix=getInverMatrix)
 }
-
 
 ## Write a short comment describing this function
 
