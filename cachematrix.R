@@ -4,7 +4,10 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
-        I <- NULL
+        i <- NULL
+        set <- function(y){
+        x <<- y
+        i <<- NULL
 }
 
 
